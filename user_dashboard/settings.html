@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tradio </title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="vendor/waves/waves.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <style>
+        .country-select {
+            appearance: menulist !important;
+            -webkit-appearance: menulist !important;
+        }
+
+        .country-search-container {
+            position: relative;
+        }
+
+        /* Hide native dropdown arrow in Firefox */
+        select.country-select {
+            -moz-appearance: none;
+            text-indent: 0.01px;
+            text-overflow: '';
+        }
+
+        s
+
+        /* Country Select Styles */
+        .country-select {
+            appearance: menulist !important;
+            -webkit-appearance: menulist !important;
+            height: auto !important;
+            /* Allow natural height */
+            min-height: 38px;
+            /* Match other form controls */
+        }
+
+        /* Dropdown options container */
+        .country-select option {
+            padding: 8px 12px;
+        }
+
+        /* Search container */
+        .country-search-container {
+            position: relative;
+            margin-bottom: 8px;
+        }
+
+        /* Ensure dropdown appears above other elements */
+        select.country-select {
+            z-index: 1;
+            position: relative;
+        }
+
+        /* Firefox fix */
+        select.country-select {
+            -moz-appearance: none;
+            text-indent: 0.01px;
+            text-overflow: '';
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 1em;
+        }
+
+        /* Make sure options are visible when dropdown opens */
+        select.country-select:focus {
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="preloader">
+        <div class="sk-three-bounce">
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+        </div>
+    </div>
+
+    <div id="main-wrapper">
+
+        <!-- Js header insert -->
+        <div id="header-insert">
+
+        </div>
+
+        <div class="page-title dashboard">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="page-title-content">
+                            <p>Welcome Back,
+                                <span> Saiful Islam</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <ul class="text-right breadcrumbs list-unstyle">
+                            <li><a href="settings.html">Settings </a></li>
+                            <li class="active"><a href="#">Security</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="card sub-menu">
+                            <div class="card-body">
+                                <ul class="d-flex">
+                                    <li class="nav-item">
+                                        <a href="settings.html" class="nav-link">
+                                            <i class="mdi mdi-account-settings-variant"></i>
+                                            <span>Edit Profile</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-12">
+                        <div class="row">
+                            <div class="col-xl-6 col-md-6">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4 class="card-title">User Profile</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <form action="#">
+                                            <div class="form-row">
+                                                <div class="form-group col-xl-12">
+                                                    <label class="mr-sm-2">Your Name</label>
+                                                    <input type="text" class="form-control" placeholder="Name">
+                                                </div>
+                                                <div class="form-group col-xl-12">
+                                                    <div class="media align-items-center mb-3">
+                                                        <img class="mr-3 rounded-circle mr-0 mr-sm-3"
+                                                            src="images/profile/2.png" width="50" height="50" alt="">
+                                                        <div class="media-body">
+                                                            <h5 class="mb-0">John Doe</h5>
+                                                            <p class="mb-0">Max file size is 20mb
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="file-upload-wrapper" data-text="Change Photo">
+                                                        <input name="file-upload-field" type="file"
+                                                            class="file-upload-field">
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <button class="btn btn-success waves-effect px-4">Save</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-md-6">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4 class="card-title">User Profile</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <form action="#">
+                                            <div class="form-row">
+                                                <div class="form-group col-xl-12">
+                                                    <label class="mr-sm-2">New Email</label>
+                                                    <input type="email" class="form-control" placeholder="Email">
+                                                </div>
+                                                <div class="form-group col-xl-12">
+                                                    <label class="mr-sm-2">New Password</label>
+                                                    <input type="password" class="form-control"
+                                                        placeholder="**********">
+                                                    <p class="mt-2 mb-0">Enable two factor authencation on the security
+                                                        page
+                                                    </p>
+                                                </div>
+                                                <div class="col-12">
+                                                    <button class="btn btn-success waves-effect px-4">Save</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4 class="card-title">Personal Information</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <form method="post" name="myform" class="personal_validate">
+                                            <div class="form-row">
+                                                <div class="form-group col-xl-6 col-md-6">
+                                                    <label class="mr-sm-2">Your Name</label>
+                                                    <input type="text" class="form-control" placeholder="Saiful Islam"
+                                                        name="fullname">
+                                                </div>
+                                                <div class="form-group col-xl-6 col-md-6">
+                                                    <label class="mr-sm-2">Email</label>
+                                                    <input type="email" class="form-control"
+                                                        placeholder="Hello@example.com" name="email">
+                                                </div>
+                                                <div class="form-group col-xl-6 col-md-6">
+                                                    <label class="mr-sm-2">Date of birth</label>
+                                                    <input type="text" class="form-control" placeholder="10-10-2025"
+                                                        id="datepicker" autocomplete="off" name="dob">
+                                                </div>
+                                                <div class="form-group col-xl-6 col-md-6">
+                                                    <label class="mr-sm-2">City</label>
+                                                    <input type="text" class="form-control" placeholder="New York"
+                                                        name="city">
+                                                </div>
+                                                <div class="form-group col-xl-6 col-md-6">
+                                                    <label class="mr-sm-2">Postal Code</label>
+                                                    <input type="text" class="form-control" placeholder="25481"
+                                                        name="postal">
+                                                </div>
+                                                <div class="form-group col-xl-6 col-md-6">
+                                                    <label class="mr-sm-2">Country</label>
+                                                    <select class="form-control country-select" name="country">
+
+                                                    </select>
+                                                </div>
+
+                                                <div class="form-group col-12">
+                                                    <button class="btn btn-success px-4">Save</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Js footer insert -->
+        <div id="footer-insert">
+
+        </div>
+    </div>
+
+
+
+    <script src="js/global.js"></script>
+
+    <script src="vendor/waves/waves.min.js"></script>
+    <script src="vendor/jquery-ui/jquery-ui.min.js"></script>
+    <script src="js/plugins/jquery-ui-init.js"></script>
+    <script src="vendor/validator/jquery.validate.js"></script>
+    <script src="vendor/validator/validator-init.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/countries.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // document.addEventListener('DOMContentLoaded', () => {
+        //     // Define default countries in case API fails
+        //     const defaultCountries = [
+        //         { code: 'US', name: 'United States' },
+        //         { code: 'CA', name: 'Canada' },
+        //         { code: 'GB', name: 'United Kingdom' },
+        //         { code: 'AU', name: 'Australia' },
+        //         { code: 'DE', name: 'Germany' },
+        //         { code: 'FR', name: 'France' },
+        //         { code: 'JP', name: 'Japan' },
+        //         { code: 'CN', name: 'China' },
+        //         { code: 'IN', name: 'India' },
+        //         { code: 'BR', name: 'Brazil' },
+        //         // Add more as needed
+        //     ];
+
+        //     // Initialize the country selector
+        //     new CountrySelect({
+        //         selector: '.country-select',
+        //         apiUrl: 'https://restcountries.com/v3.1/all',
+        //         formatData: (data) => {
+        //             // Make sure we're processing the data in the expected format
+        //             try {
+        //                 return data.map(country => ({
+        //                     code: country.cca2 || country.alpha2Code || '',
+        //                     name: country.name?.common || country.name || ''
+        //                 })).sort((a, b) => a.name.localeCompare(b.name));
+        //             } catch (err) {
+        //                 console.error('Error formatting country data:', err);
+        //                 return defaultCountries;
+        //             }
+        //         },
+        //         staticCountries: defaultCountries, // Fallback if API fails
+        //         placeholder: 'Select a country',
+        //         defaultCountry: 'US',
+        //         onSelect: (countryCode) => {
+        //             console.log('Selected country code:', countryCode);
+        //         }
+        //     });
+        // });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            new CountrySelect({
+                selector: '.country-select',
+                apiUrl: 'https://restcountries.com/v3.1/all',
+                formatData: (data) => {
+                    return data.map(country => ({
+                        code: country.cca2,
+                        name: country.name.common
+                    })).sort((a, b) => a.name.localeCompare(b.name));
+                },
+                scrollHeight: '300px', // Explicit height for dropdown
+                placeholder: 'Select country',
+                onSelect: (code) => console.log('Selected:', code)
+            });
+        });
+    </script>
+</body>
+
+</html>
