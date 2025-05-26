@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Withdrawal Confirmation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Modal Styles - Same as deposit */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 10% auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 500px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .file-input-wrapper {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .file-input-button {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #f0f0f0;
+            border: 1px dashed #ccc;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+        }
+
+        #withdrawalPreview {
+            max-width: 100%;
+            max-height: 200px;
+            margin-top: 10px;
+            display: none;
+        }
+
+        #confirmWithdrawalBtn {
+            background-color: #f44336;
+            /* Red color for withdrawal */
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255, 255, 255, .3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+            margin-right: 10px;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Withdrawal Modal -->
+    <div id="withdrawalConfirmationModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Confirm Your Withdrawal</h2>
+
+            <form id="withdrawalConfirmationForm">
+                <div class="form-group">
+                    <label for="withdrawalAmount">Amount</label>
+                    <input type="number" id="withdrawalAmount" name="amount" required placeholder="Enter amount">
+                </div>
+
+                <div class="form-group">
+                    <label for="withdrawalWallet">Wallet Address</label>
+                    <input type="text" id="withdrawalWallet" name="walletAddress" required
+                        placeholder="Enter your wallet address">
+                </div>
+
+                <div class="form-group">
+                    <label for="network">Network</label>
+                    <select id="network" name="network" required>
+                        <option value="">Select Network</option>
+                        <option value="BTC">Bitcoin (BTC)</option>
+                        <option value="ETH">Ethereum (ETH)</option>
+                        <option value="USDT">Tether (USDT)</option>
+                        <option value="BNB">Binance Coin (BNB)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="withdrawalProof">Upload Payment Proof (Optional)</label>
+                    <div class="file-input-wrapper">
+                        <button class="file-input-button" type="button">
+                            <i class="fas fa-upload"></i> Choose Proof File
+                        </button>
+                        <input type="file" id="withdrawalProof" name="proof" accept="image/*,.pdf">
+                    </div>
+                    <img id="withdrawalPreview" alt="Proof Preview">
+                </div>
+
+                <button type="submit" id="confirmWithdrawalBtn">
+                    Confirm Withdrawal
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Button to trigger the modal -->
+    <button id="openWithdrawalModalBtn" style="padding: 10px 20px; margin: 20px;">Request Withdrawal</button>
+
+    <script>
+       
+    </script>
+</body>
+
+</html>

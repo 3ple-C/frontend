@@ -3989,6 +3989,24 @@ body::-webkit-scrollbar-thumb {
 /*==============================
 	Page error
 ==============================*/
+.error-message {
+    color: white; /* Perfect balance - not too harsh, not too weak */
+     background: linear-gradient(135deg, #4CAF50 0%, #388E3C 100%);/* 10% opacity yellow */
+    padding: 12px 16px;
+    border-radius: 8px;
+    display: none;
+    align-items: center;
+    gap: 8px;
+    margin: 15px 0;
+    font-weight: 500;
+    border: none;
+     box-shadow: 0 4px 12px rgba(46, 139, 87, 0.3)
+}
+
+.error-message::before {
+    content: "⚠";
+    font-size: 1.2em;
+}
 .page-error {
   display: flex;
   flex-direction: column;
@@ -4235,6 +4253,10 @@ body::-webkit-scrollbar-thumb {
   width: 50px;
   border: 2px solid;
   border-radius: 50%;
+}
+.block-icon img{
+  width: 100%;
+  border-radius: 50px;
 }
 .block-icon i {
   font-size: 22px;

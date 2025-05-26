@@ -18,10 +18,10 @@
 	<link rel="icon" type="image/png" href="icon/favicon-32x32.png" sizes="32x32">
 	<link rel="apple-touch-icon" href="icon/favicon-32x32.png">
 
-	<meta name="description" content="Arbitrage trading HTML Template">
+	<meta name="description" content="Renzo Global Trading">
 	<meta name="keywords" content="">
 	<meta name="author" content="Dmitry Volkov">
-	<title>Centure – Arbitrage trading HTML Template</title>
+	<title>Renzo Global Trading Corporation</title>
 </head>
 
 <body class="body">
@@ -31,38 +31,65 @@
 			<!-- form -->
 			<form action="#" class="form form--content">
 				<div class="form__logo-wrap">
-					<a href="index-2.html" class="form__logo">
-						<img src="img/logo.svg" alt="">
+					<a href="index.html" class="form__logo">
+						<img src="img/logo-coin.jpg" alt="logo" style="border-radius: 50px;">
 					</a>
-					<span class="form__tagline">Arbitrage trading <br>HTML Template</span>
+					<span class="form__tagline">Renzo Global <br>Trading Corporation</span>
 				</div>
 
 				<div class="form__group">
-					<input type="text" class="form__input" placeholder="Name">
+					<input type="text" class="form__input input" placeholder="Name">
 				</div>
 
 				<div class="form__group">
-					<input type="text" class="form__input" placeholder="Email">
+					<input type="text" class="form__input input" placeholder="Email">
 				</div>
 
 				<div class="form__group">
-					<input type="password" class="form__input" placeholder="Password">
+					<select name="plans" id="plans" class="bg- form-select ">
+						<option value="1">Choose Plan</option>
+						<option value="silver">Silver Plan</option>
+						<option value="diamond">Diamond Plan</option>
+						<option value="gold">Gold Plan</option>
+					</select>
+				</div>
+
+				<!-- <div class="form__group">
+					<input type="text" class="form__input" placeholder="D.O.B">
+				</div>
+
+				<div class="form__group">
+					<input type="text" class="form__input" placeholder="City">
+				</div>
+
+				<div class="form__group">
+					<input type="text" class="form__input" placeholder="Country">
+				</div> -->
+
+				<div class="form__group">
+					<input type="password" class="form__input input" placeholder="Password">
+				</div>
+
+				<div class="form__group">
+					<input type="password" class="form__input input" placeholder="Confirm password">
 				</div>
 
 				<div class="form__group form__group--checkbox">
 					<input id="remember" name="remember" type="checkbox">
 					<label for="remember">I agree to the <a href="privacy.html">Privacy Policy</a></label>
 				</div>
+
+				<p class="error-message" id="signupError"></p>
 				
 				<button class="form__btn" type="button">Sign up</button>
 
-				<span class="form__delimiter">or</span>
+				<!-- <span class="form__delimiter">or</span>
 
 				<div class="form__social">
 					<a class="fb" href="#"><i class="ti ti-brand-facebook"></i></a>
 					<a class="tw" href="#"><i class="ti ti-brand-x"></i></a>
 					<a class="gl" href="#"><i class="ti ti-brand-google"></i></a>
-				</div>
+				</div> -->
 
 				<span class="form__text form__text--center">Already have an account? <a href="signin.html">Sign in!</a></span>
 
@@ -89,7 +116,23 @@
 	<script src="js/three.min.js"></script>
 	<script src="js/vanta.fog.min.js"></script>
 	<script src="js/main.js"></script>
+
+	<script src="config.js"></script>
+	<script src="js/signup.js"></script>
+
+	<!--Start of Tawk.to Script-->
+	<script type="text/javascript">
+		var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+		(function () {
+			var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+			s1.async = true;
+			s1.src = 'https://embed.tawk.to/683098d8980dfb190f09ca12/1iruta4bu';
+			s1.charset = 'UTF-8';
+			s1.setAttribute('crossorigin', '*');
+			s0.parentNode.insertBefore(s1, s0);
+		})();
+	</script>
+	<!--End of Tawk.to Script-->
 </body>
 
-<!-- Mirrored from centure.volkovdesign.com/signup.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 17 May 2025 17:22:58 GMT -->
 </html>

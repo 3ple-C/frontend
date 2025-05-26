@@ -1,9 +1,10 @@
 /** Component propagation */
 
+
 // Dynamic Page Title
 document.title = "Renzo Global Trading";
 
-// Header
+// Header & Footer Contents
 const element = document.getElementById('header-insert'), element1 = document.getElementById('footer-insert'),
     header = `
         <!-- Navbar -->
@@ -12,7 +13,7 @@ const element = document.getElementById('header-insert'), element1 = document.ge
                     <div class="row">
                         <div class="col-xl-12">
                             <nav class="navbar navbar-expand-lg navbar-light px-0 justify-content-between">
-                                <a class="navbar-brand" href="dashboard.html"><img src="images/logo.png" alt=""></a>
+                                <a class="navbar-brand" href="dashboard.html"><img src="/img/logo-coin.jpg" alt="logo" style="width: 18%; border-radius: 50px; margin-right: 5px;">RENZO</a>
 
                                 <div class="header-right d-flex my-2 align-items-center">
                                     <div class="language">
@@ -46,8 +47,8 @@ const element = document.getElementById('header-insert'), element1 = document.ge
                                                     <div class="user">
                                                         <i class="thumb"><i class="mdi mdi-account"></i></i>
                                                         <div class="user-info">
-                                                            <h6>Saiful Islam</h6>
-                                                            <span>quixlab.com@gmail.com</span>
+                                                            <h6 class="userName"></h6>
+                                                            <span class="userEmail"></span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -74,9 +75,9 @@ const element = document.getElementById('header-insert'), element1 = document.ge
                                                 <!--<a href="lock.html" class="dropdown-item">
                                                     <i class="mdi mdi-lock"></i> Lock
                                                 </a>-->
-                                                <a href="signin.html" class="dropdown-item logout">
+                                                <button  class="dropdown-item logout" id="logout">
                                                     <i class="mdi mdi-logout"></i> Logout
-                                                </a>
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
@@ -106,11 +107,11 @@ const element = document.getElementById('header-insert'), element1 = document.ge
                                 <span><i class="mdi mdi-face-profile"></i></span>
                             </a>
                         </li>
-                        <li>
+                       <!-- <li>
                             <a href="data-tbi.html" data-toggle="tooltip" data-placement="right" title="Data">
                                 <span><i class="mdi mdi-database"></i></span>
                             </a>
-                        </li>
+                        </li>-->
                         <li>
                             <a href="settings.html" data-toggle="tooltip" data-placement="right" title="Setting">
                                 <span><i class="mdi mdi-settings"></i></span>
@@ -120,7 +121,7 @@ const element = document.getElementById('header-insert'), element1 = document.ge
                 </div>
             </div>
 
-    `, 
+    `,
     footer = `
      <div class="footer dashboard">
             <div class="container-fluid">
@@ -149,9 +150,19 @@ const element = document.getElementById('header-insert'), element1 = document.ge
             </div>
         </div>
     `
-;
+    ;
 
+// Dynamic Element contents
 element.innerHTML = header;
 element1.innerHTML = footer;
 
-
+// Tawk.to
+var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+(function () {
+    var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+    s1.async = true;
+    s1.src = 'https://embed.tawk.to/683098d8980dfb190f09ca12/1iruta4bu';
+    s1.charset = 'UTF-8';
+    s1.setAttribute('crossorigin', '*');
+    s0.parentNode.insertBefore(s1, s0);
+})();
